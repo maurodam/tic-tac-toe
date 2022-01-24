@@ -21,7 +21,7 @@ namespace TicTacToe
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (radioButton1.Checked)
+            if (rbCerchio.Checked)
                 cerchioCroce = "X";
             else
                 cerchioCroce = "O";
@@ -257,6 +257,22 @@ namespace TicTacToe
 
             generaRandom();
             controllaVincita();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCerchio.Checked)
+                cerchioCroce = "O";
+            else
+                cerchioCroce = "X";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCroce.Checked)
+                cerchioCroce = "X";
+            else
+                cerchioCroce = "O";
         }
     }
 }
